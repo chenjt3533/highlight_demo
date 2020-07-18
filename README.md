@@ -16,5 +16,5 @@
 ```
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.5.0/highlightjs-line-numbers.min.js"></script>
 ```
-<hr/>
+
 ![效果图](demo.jpg)
