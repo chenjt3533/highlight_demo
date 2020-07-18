@@ -1,7 +1,7 @@
 # highlight_demo
 代码高亮、行号显示
 
-# 使用 highlight
+## 使用 highlight
 源码 https://github.com/highlightjs/highlight.js
 <br/>下载 https://highlightjs.org/download/
 ```
@@ -10,7 +10,7 @@
 <link id="code_css" rel="stylesheet" href="highlight/styles/monokai-sublime.css">
 ```
 
-# 使用 highlightjs-line-numbers
+## 使用 highlightjs-line-numbers
 源码 https://github.com/wcoder/highlightjs-line-numbers.js
 <br/>无需下载
 ```
