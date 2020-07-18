@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>代码高亮</title>
+  <link id="code_css" rel="stylesheet" href="highlight/styles/monokai-sublime.css">
+  <script src="highlight/highlight.pack.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.min.js"></script>
+  <style>
+      pre{ border:1px solid #ddd}
+  </style>
+</head>
+<body>
+	<h1 align="center">代码高亮</h1>
+	<div id="languages">
+	语言：<select id="lang"></select>
+	&emsp;&emsp;风格：
+	<select id="output-style">
+		<option value="a11y-dark">a11y-dark</option>
+		<option value="a11y-light">a11y-light</option>
+		<option value="agate">agate</option>
+		<option value="an-old-hope">an-old-hope</option>
+		<option value="androidstudio">androidstudio</option>
+		<option value="arduino-light">arduino-light</option>
+		<option value="arta">arta</option>
+		<option value="ascetic">ascetic</option>
+		<option value="atelier-cave-dark">atelier-cave-dark</option>
+		<option value="atelier-cave-light">atelier-cave-light</option>
+		<option value="atelier-dune-dark">atelier-dune-dark</option>
+		<option value="atelier-dune-light">atelier-dune-light</option>
+		<option value="atelier-estuary-dark">atelier-estuary-dark</option>
+		<option value="atelier-estuary-light">atelier-estuary-light</option>
+		<option value="atelier-forest-dark">atelier-forest-dark</option>
+		<option value="atelier-forest-light">atelier-forest-light</option>
+		<option value="atelier-heath-dark">atelier-heath-dark</option>
+		<option value="atelier-heath-light">atelier-heath-light</option>
+		<option value="atelier-lakeside-dark">atelier-lakeside-dark</option>
+		<option value="atelier-lakeside-light">atelier-lakeside-light</option>
+		<option value="atelier-plateau-dark">atelier-plateau-dark</option>
+		<option value="atelier-plateau-light">atelier-plateau-light</option>
+		<option value="atelier-savanna-dark">atelier-savanna-dark</option>
+		<option value="atelier-savanna-light">atelier-savanna-light</option>
+		<option value="atelier-seaside-dark">atelier-seaside-dark</option>
+		<option value="atelier-seaside-light">atelier-seaside-light</option>
+		<option value="atelier-sulphurpool-dark">atelier-sulphurpool-dark</option>
+		<option value="atelier-sulphurpool-light">atelier-sulphurpool-light</option>
+		<option value="atom-one-dark-reasonable">atom-one-dark-reasonable</option>
+		<option value="atom-one-dark">atom-one-dark</option>
+		<option value="atom-one-light">atom-one-light</option>
+		<option value="brown-paper">brown-paper</option>
+		<option value="codepen-embed">codepen-embed</option>
+		<option value="color-brewer">color-brewer</option>
+		<option value="darcula">darcula</option>
+		<option value="dark">dark</option>
+		<option value="default">default</option>
+		<option value="docco">docco</option>
+		<option value="dracula">dracula</option>
+		<option value="far">far</option>
+		<option value="foundation">foundation</option>
+		<option value="github-gist">github-gist</option>
+		<option value="github">github</option>
+		<option value="gml">gml</option>
+		<option value="googlecode">googlecode</option>
+		<option value="gradient-dark">gradient-dark</option>
+		<option value="grayscale">grayscale</option>
+		<option value="gruvbox-dark">gruvbox-dark</option>
+		<option value="gruvbox-light">gruvbox-light</option>
+		<option value="hopscotch">hopscotch</option>
+		<option value="hybrid">hybrid</option>
+		<option value="idea">idea</option>
+		<option value="ir-black">ir-black</option>
+		<option value="isbl-editor-dark">isbl-editor-dark</option>
+		<option value="isbl-editor-light">isbl-editor-light</option>
+		<option value="kimbie.dark">kimbie.dark</option>
+		<option value="kimbie.light">kimbie.light</option>
+		<option value="lightfair">lightfair</option>
+		<option value="lioshi">lioshi</option>
+		<option value="magula">magula</option>
+		<option value="mono-blue">mono-blue</option>
+		<option value="monokai-sublime">monokai-sublime</option>
+		<option value="monokai">monokai</option>
+		<option value="night-owl">night-owl</option>
+		<option value="nnfx-dark">nnfx-dark</option>
+		<option value="nnfx">nnfx</option>
+		<option value="nord">nord</option>
+		<option value="obsidian">obsidian</option>
+		<option value="ocean">ocean</option>
+		<option value="paraiso-dark">paraiso-dark</option>
+		<option value="paraiso-light">paraiso-light</option>
+		<option value="pojoaque">pojoaque</option>
+		<option value="purebasic">purebasic</option>
+		<option value="qtcreator_dark">qtcreator_dark</option>
+		<option value="qtcreator_light">qtcreator_light</option>
+		<option value="railscasts">railscasts</option>
+		<option value="rainbow">rainbow</option>
+		<option value="routeros">routeros</option>
+		<option value="school-book">school-book</option>
+		<option value="shades-of-purple">shades-of-purple</option>
+		<option value="solarized-dark">solarized-dark</option>
+		<option value="solarized-light">solarized-light</option>
+		<option value="srcery">srcery</option>
+		<option value="sunburst">sunburst</option>
+		<option value="tomorrow-night-blue">tomorrow-night-blue</option>
+		<option value="tomorrow-night-bright">tomorrow-night-bright</option>
+		<option value="tomorrow-night-eighties">tomorrow-night-eighties</option>
+		<option value="tomorrow-night">tomorrow-night</option>
+		<option value="tomorrow">tomorrow</option>
+		<option value="vs">vs</option>
+		<option value="vs2015">vs2015</option>
+		<option value="xcode">xcode</option>
+		<option value="xt256">xt256</option>
+		<option value="zenburn">zenburn</option>
+	</select>
+	</div>
+	<br/>
+	<div>
+		源码:
+		<br/>
+		<textarea id="srcCode" rows="8", cols="56">
+#include <stdio.h>
+int main()
+{
+	return 0;
+}
+</textarea>
+	</div>
+	<div>
+	<pre class='hljs' border="1">
+<code id="preview"/>
+	</pre>
+	</div>
+
+	<script>
+		$(function(){
+			initLang();
+			preview();
+		});
+		
+		function initLang() {
+			var langs = hljs.listLanguages();
+			var lang_html = '<option value="">自动检测</option>';
+			for(var i = 0; i <= langs.length - 1; i++) {
+				lang_html += '<option value="' + langs[i] + '">' + langs[i] +'</option>'
+			}
+			$('#lang').html(lang_html)
+			if (window.localStorage) {
+				var default_lang = window.localStorage.getItem('highlight_default_lang');
+				var default_style = window.localStorage.getItem('highlight_default_style');
+				default_lang && $('#lang').val(default_lang); 
+				default_style && $('#output-style').val(default_style);
+			}
+		};
+		
+		$('#lang, #output-style').change(function(){
+			preview()
+			
+			if (window.localStorage) {
+				window.localStorage.setItem('highlight_default_lang', $('#lang').val());
+				window.localStorage.setItem('highlight_default_style', $('#output-style').val());
+			}
+		});
+		
+		$('#srcCode').bind('input',function(){
+			preview()
+		});
+
+		function preview() {
+			var currentText = document.getElementById('srcCode').value
+			
+			if ($("#lang").val() != '') {
+				var html = hljs.highlight($("#lang").val(), currentText).value;
+			} else {
+				var html = hljs.highlightAuto(currentText).value;
+			}
+			$("#preview").html(html);
+			$("#code_css").attr('href', 'highlight/styles/'+$('#output-style').val()+'.css')
+		};
+
+	</script>
+</body>
+</html>
